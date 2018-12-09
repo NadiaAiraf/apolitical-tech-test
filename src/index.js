@@ -2,8 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class AnagramFinder extends React.Component {
+function readString () {
+        var request = new XMLHttpRequest();
+        request.open("GET", "./wordlist.txt", false);
+        request.send();
+        var returnText = request.responseText;
 
+        return returnText;
+}
+
+var text = readString("./wordlist.txt").split("\n");
+
+class AnagramFinder extends React.Component {
 
   render() {
     return(
