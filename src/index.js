@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-function readString () {
+function returnWords () {
         var request = new XMLHttpRequest();
         request.open("GET", "./wordlist.txt", false);
         request.send();
