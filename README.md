@@ -1,44 +1,23 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Anagram Finder
 
-## Available Scripts
+Tech test, create a web page application that takes a word and finds all of it's anagrams from this [list](http://codekata.com/data/wordlist.txt).
 
-In the project directory, you can run:
+This tech test was completed using React and 'tested' using Jest Enzyme. I've had a very small amount of previous experience with Jest and React but came into this test having never used Enzyme and it really shows. Everything in this repo was completed in just over 1 hour (asides from this readme).
 
-### `npm start`
+## How to run this application
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. clone this repo/saves this files locally if you have a zip folder
+2. navigate to this folder on your command line
+3. enter the command `npm install`
+4. enter command `npm start`
+5. go to your localhost:3000 with your browser of choice
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Testing
 
-### `npm test`
+In an ideal world, to run these tests it's been setup to run on the command `npm test` which also shows you code coverage. Testing React has been completely new to me and because of this despite attempting a couple of different methods of setting up Enzyme with Jest it continues to have issues with the jsx that React uses.
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In an effort to actually have something to submit I continued without testing after spending approx 35% of my time trying to get these tests to work. I did write the tests so hopefully they give a small indication of how I might have tested things.
 
-### `npm run build`
+## Where I got to
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+I was just finishing off writing the code to return an array of all of the algorithms. The next step would have been to set up the code so that it returned an unordered list of those algorithms on the page below the input box.
