@@ -11,9 +11,20 @@ describe('returnWords', () => {
   })
 })
 
-// describe('AnagramFinder', () => {
-//   it('should render a form html element', () => {
-//     const wrapper = shallow(<AnagramFinder />)
-//     expect(wrapper.find('form').length).toEqual(1)
-//   })
-// })
+describe('AnagramFinder', () => {
+  it('should render a form html element', () => {
+    const wrapper = shallow(<AnagramFinder />)
+    expect(wrapper.find('form').length).toEqual(1)
+  })
+
+  describe(handleChange, () => {
+    it('finds the new anagrams available when the handle changes', () =>{
+      anagramFinder = new AnagramFinder()
+      anagramFinder.setState = jest.fn()
+      anagramFinder.returnAnagrams = jest.fn()
+      anagramFinder.handleChange()
+      expect(anagramFinder.setState).toHaveBeenCalledTimes(1)
+      expect(anagramFinder.returnAnagrams).toHaveBeenCalledTimes(1)
+    })
+  })
+})

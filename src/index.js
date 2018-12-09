@@ -14,12 +14,25 @@ function returnWords () {
 var text = readString("./wordlist.txt").split("\n");
 
 class AnagramFinder extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      anagrams: []
+    }
+  }
+
+  handleChange() {
+    this.setState({
+      anagrams: this.returnAnagrams()
+    })
+  }
+
 
   render() {
     return(
       <form>
         <label>
-          <textarea placeholder={'enter word here'} />
+          <textarea placeholder={'enter word here'} onChange={this.handleChange} />
         </label>
         <ul>
           // Where my list of anagrams will be
