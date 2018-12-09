@@ -11,7 +11,7 @@ function returnWords () {
         return returnText;
 }
 
-var text = readString("./wordlist.txt").split("\n");
+var text = returnWords("./wordlist.txt").split("\n");
 
 class AnagramFinder extends React.Component {
   constructor(props) {
@@ -21,10 +21,19 @@ class AnagramFinder extends React.Component {
     }
   }
 
-  handleChange() {
+  handleChange(event) {
     this.setState({
+      value: event.target.value
       anagrams: this.returnAnagrams()
     })
+  }
+
+  returnAnagrams() {
+
+  }
+
+  sortWord(word) {
+    return word.split('').sort().join('')
   }
 
 

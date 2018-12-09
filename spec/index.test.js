@@ -27,4 +27,12 @@ describe('AnagramFinder', () => {
       expect(anagramFinder.returnAnagrams).toHaveBeenCalledTimes(1)
     })
   })
+
+  describe(sortWord, () => {
+    it('returns a single string sorted alphabetically', () => {
+      anagramFinder = new AnagramFinder()
+      answer = anagramFinder.sortWord('hello')
+      expect(answer).toEqual('ehllo')
+    })
+  })
 })
