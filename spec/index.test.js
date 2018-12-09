@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from '../src/enzyme'
+import { shallow } from 'enzyme'
 
 import AnagramFinder from '../src/index.js';
 import returnWords from '../src/index.js'
