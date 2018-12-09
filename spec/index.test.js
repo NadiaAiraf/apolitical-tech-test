@@ -28,11 +28,18 @@ describe('AnagramFinder', () => {
     })
   })
 
-  describe(sortWord, () => {
+  describe('sortWord', () => {
     it('returns a single string sorted alphabetically', () => {
       anagramFinder = new AnagramFinder()
       answer = anagramFinder.sortWord('hello')
       expect(answer).toEqual('ehllo')
+    })
+  })
+
+  describe('returnAnagrams', () => {
+    it('returns an array of all possible anagrams of a given word', () => {
+      anagramFinder = new AnagramFinder()
+      
     })
   })
 })

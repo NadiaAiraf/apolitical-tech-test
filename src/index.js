@@ -23,13 +23,19 @@ class AnagramFinder extends React.Component {
 
   handleChange(event) {
     this.setState({
-      value: event.target.value
-      anagrams: this.returnAnagrams()
+      value: event.target.value,
+      anagrams: this.returnAnagrams(this.state.value)
     })
   }
 
-  returnAnagrams() {
-
+  returnAnagrams(keyword) {
+    var anagrams = []
+    for (var i = 0; i < text.length; i++) {
+      if (this.sortWord(text[i] === this.sortWord(keyword))) {
+        anagrams.push(text[i])
+      }
+    }
+    return anagrams
   }
 
   sortWord(word) {
